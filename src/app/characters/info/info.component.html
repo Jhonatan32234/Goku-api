@@ -1,0 +1,29 @@
+<table class="min-w-full border-collapse border border-gray-300 shadow-lg">
+    <thead>
+        <tr class="bg-gray-500 text-white">
+            <th class="px-4 py-2 border border-gray-300">Nombre</th>
+            <th class="px-4 py-2 border border-gray-300">Ki</th>
+            <th class="px-4 py-2 border border-gray-300">Raza</th>
+            <th class="px-4 py-2 border border-gray-300">Foto</th>
+            <th>Trasformation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let character of characters" class="odd:bg-white even:bg-gray-100 hover:bg-blue-100">
+            <td class="px-4 py-2 border border-gray-300 text-center">{{character.name}}</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">{{character.ki}}</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">{{character.race}}</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">
+                <img [src]="character.image" alt="{{character.name}}" class="w-22 h-40 rounded-full mx-auto">
+            </td>
+            <td class="text-center">
+                <button 
+                    (click)="mostrar(character.id)" 
+                    class="bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-700 mx-auto">
+                    Transformaciones
+                </button>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

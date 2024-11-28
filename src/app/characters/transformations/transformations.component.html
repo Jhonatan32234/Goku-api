@@ -1,0 +1,21 @@
+<table>
+    <thead>
+      <tr>
+        <th>Nombre de la transformación</th>
+        <th>Imagen</th>
+        <th>Ki</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transformation of transformations">
+        <ng-container *ngIf="transformation.idp === idp">
+          <td>{{transformation.name}}</td>
+          <td>
+            <img [src]="transformation.image" alt="{{transformation.name}}" class="w-22 h-40 rounded-full mx-auto">
+          </td>
+          <td>{{transformation.ki}}</td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+  

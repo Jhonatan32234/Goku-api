@@ -5,7 +5,8 @@
             <th class="px-4 py-2 border border-gray-300">Ki</th>
             <th class="px-4 py-2 border border-gray-300">Raza</th>
             <th class="px-4 py-2 border border-gray-300">Foto</th>
-            <th>Trasformation</th>
+            <th class="px-4 py-2 border border-gray-300">Trasformacion</th>
+            <th class="px-4 py-2 border border-gray-300">Planeta de origen</th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +24,13 @@
                     Transformaciones
                 </button>
             </td>
-            
+            <td class="text-center">
+                <button 
+                    (click)="mostrarPlaneta(character.id)" 
+                    class="bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-700 mx-auto">
+                    Planeta
+                </button>
+            </td>
         </tr>
     </tbody>
 </table>

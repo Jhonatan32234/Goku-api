@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routes';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CharactersModule } from './characters/characters.module';
-import { PlanetsModule } from './planets/planets.module';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { PlanetsModule } from './planets/planets.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CharactersModule,
-    PlanetsModule
+    CharactersModule
     
 ],
   providers: [],

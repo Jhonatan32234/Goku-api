@@ -23,12 +23,14 @@ export class InfoComponent implements OnInit {
     });
   }
   mostrar(id: number): void {
-    console.log(`Personaje seleccionado: ${id}`);
+    localStorage.setItem("idt", id.toString());
+    this.router.navigate(["/transformations"])
+    
   }
 
   async mostrarPlaneta(id:number):Promise<void>{
     localStorage.setItem("id", id.toString());
-    // const result = await this.characterService.getOrigin(id).toPromise(); 
+    //const result = await this.characterService.getOrigin(id).toPromise(); 
      // console.log(result);
       this.router.navigate(["planet"])
    

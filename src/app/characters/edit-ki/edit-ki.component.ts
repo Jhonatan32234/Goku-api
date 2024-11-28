@@ -52,4 +52,8 @@ export class EditKiComponent implements OnInit {
     this.transformationService.updateTransformation(this.transformation);
     this.router.navigate(['/transformations']);
   }
+
+  volver():void{
+    this.router.navigate(["/transformations"])
+  }
 }

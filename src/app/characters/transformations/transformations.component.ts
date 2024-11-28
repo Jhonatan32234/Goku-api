@@ -27,7 +27,12 @@ export class TransformationsComponent {
 
   editTransformation(transformation: any): void {
     this.transformationService.setTransformation(transformation);
-    this.router.navigate(['/edit-ki']);
+    this.router.navigate(['/editki']);
+  }
+
+  volver():void{
+    localStorage.setItem("idt","")
+    this.router.navigate(["/characters"])
   }
 
 }

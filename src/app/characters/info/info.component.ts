@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Info } from '../interface/info';
 import { CharactersService } from '../service/characters.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-info',
@@ -10,7 +11,7 @@ import { CharactersService } from '../service/characters.service';
 export class InfoComponent implements OnInit {
   characters: Info[] = [];
 
-  constructor(private characterService: CharactersService) {}
+  constructor(private characterService: CharactersService,private router:Router) {}
 
   ngOnInit(): void {
     this.cargarPersonajes();
@@ -23,6 +24,14 @@ export class InfoComponent implements OnInit {
   }
   mostrar(id: number): void {
     console.log(`Personaje seleccionado: ${id}`);
+  }
+
+  async mostrarPlaneta(id:number):Promise<void>{
+    localStorage.setItem("id", id.toString());
+    // const result = await this.characterService.getOrigin(id).toPromise(); 
+     // console.log(result);
+      this.router.navigate(["planet"])
+   
   }
   
 }

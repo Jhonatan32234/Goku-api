@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { InfoComponent } from './characters/info/info.component';
 import { TransformationsComponent } from './characters/transformations/transformations.component';
+import { DashboardComponent } from './planets/dashboard/dashboard.component';
 
 
 
@@ -9,6 +10,11 @@ import { TransformationsComponent } from './characters/transformations/transform
 export const routes: Routes = [
     {path:'characters',component:InfoComponent},
     {path:'transformations',component:TransformationsComponent},
+    {path:'planet',component:DashboardComponent},
+    {path:'', redirectTo:'/characters',pathMatch:'full'},
+    {path:'**', redirectTo:'/characters'},
+
+
 
 ];
 
